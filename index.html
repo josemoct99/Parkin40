@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Inicio de sesión</title>
+  </head>
+  <body>
+
+    <div class="container w-100 mt-3 rounded border">
+      <div class="row">
+        <div class="col bg-primary rounded d-none d-lg-block">
+          <img src="img/logo.jpg" class="img-fluid pt-5">
+
+        </div>
+        <div class="col rounded p-5">
+          <div class="text-end">
+            <img src="img/logo.jpg" class="rounded-circle" width="60px" alt="">
+          </div>
+
+          <h2 class="fw-bold text-center py-5">Bienvenido a Parkin 40</h2>
+
+          <!--LOGIN -->
+
+          <form action="./servidor/validar.php" method="post">
+            <div class="mb-4">
+              <label for="codigo" class="form-label">Código estudiantil</label>
+              <input type="codigo" class="form-control" name="codigo">
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+
+            <div class="d-grid">
+              <button type="button" class="btn btn-light" onclick=`${window.location.href='./paginas/usuario.html'}`>Ingresar</button>
+            </div>
+
+            <div class="my-3 text-center">
+              <span >¿Olvidaste tu contraseña?<a href="#">  Recupérala</a> </span> <br> <!--Linkear a recuperar contraseña-->
+              <span>¿No tienes cuenta?<a href="#">  Regístrate</a> </span> <!--Linkear a registro usuario--> 
+            </div>
+
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
